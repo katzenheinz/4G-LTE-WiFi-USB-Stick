@@ -12,6 +12,7 @@ Resources
 https://github.com/OpenStick
 https://www.kancloud.cn/handsomehacker/openstick/2637565
 https://wvthoog.nl/openstick/
+https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
 ```
 
 How to compile kernel 5.15 - Guide/Summary
