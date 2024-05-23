@@ -1,12 +1,14 @@
 # 4G-LTE-WiFi-USB-Stick
 Archive/collection of information for Chinese (Aliexpress) Wifi/LTE/4G/USB sticks, which can be used as 8€ SBC.
 
+```
 Resources
 https://github.com/OpenStick
 https://www.kancloud.cn/handsomehacker/openstick/2637565
 
 
 From https://www.kancloud.cn/handsomehacker/openstick/2637565 (translated using deepl.com):
+
 
 About OpenStick
 Here is how to customize your own kernel using linux. The recommended distribution is Ubuntu 20.04.
@@ -71,3 +73,4 @@ $ mkbootimg \
         --kernel kernel-dtb -o boot.img
 
 After that, you can flush the two img files into the corresponding partitions.
+```
