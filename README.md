@@ -11,6 +11,7 @@ Resources
 ```
 https://github.com/OpenStick
 https://www.kancloud.cn/handsomehacker/openstick/2637565
+https://wvthoog.nl/openstick/
 ```
 
 From https://www.kancloud.cn/handsomehacker/openstick/2637565 (translated using deepl.com):
@@ -81,7 +82,7 @@ $ mkbootimg \
 After that, you can flush the two img files into the corresponding partitions.
 ```
 
-Copied from: https://zebra.ddscentral.org/pub/downloads/openstick/firmware/uz801_v30/README
+Copied from https://zebra.ddscentral.org/pub/downloads/openstick/firmware/uz801_v30/README
 
 ```
 
