@@ -1,8 +1,14 @@
 # 4G-LTE-WiFi-USB-Stick
 Archive/collection of information for Chinese (Aliexpress) Wifi/LTE/4G/USB sticks, which can be used as 8€ SBC.
 
+Where to buy?
+```
+https://de.aliexpress.com/item/1005006394474912.html | white model | UZ801 V3.2
+https://de.aliexpress.com/item/1005006394474912.html | black model | UZ801 V3.2
+https://de.aliexpress.com/item/1005006189041594.html | black model | UZ801 V3.0
 ```
 Resources
+```
 https://github.com/OpenStick
 https://www.kancloud.cn/handsomehacker/openstick/2637565
 ```
