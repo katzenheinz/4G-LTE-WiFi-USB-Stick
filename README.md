@@ -24,7 +24,12 @@ make msm8916_defconfig
 make menuconfig
 make -j2
 fakeroot make-kpkg --initrd --cross-compile aarch64-linux-gnu- --arch arm64 kernel_image kernel_headers
-
+cd ..
+cp linux/arch/arm64/boot/Image.gz
+cp linux/arch/arm64/boot/dts/qcom/msm8916-handsome-openstick-uz801.dtb .
+cat Image.gz msm8916-handsome-openstick-uz801.dtb > kernel-dtb
+// Install .deb Packages on devices, copy created initrd.img to working dir
+mkbootimg ---base 0x80000000 --kernel_offset 0x00080000 --ramdisk_offset 0x02000000 ---tags_offset 0x01e00000 --pagesize 2048 --second_offset 0x00f00000 --ramdisk initrd.img --cmdline “earlycon root=PARTUUID=a7ab80e8-e9d1-e8cd-f157-93f69b1d141e console=ttyMSM0,115200 no_framebuffer=true rw” --kernel kernel-dtb -o boot.img
 ```
 
 
