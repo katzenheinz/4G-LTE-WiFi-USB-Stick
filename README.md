@@ -14,6 +14,17 @@ https://www.kancloud.cn/handsomehacker/openstick/2637565
 https://wvthoog.nl/openstick/
 ```
 
+How to compile kernel 5.15 - Guide/Summary
+
+```
+export CROSS_COMPILE=aarch64-linux-gnu-
+export ARCH=arm64
+make msm8916_defconfig
+make menuconfig
+make -j16
+```
+
+
 From https://www.kancloud.cn/handsomehacker/openstick/2637565 (translated using deepl.com):
 
 ```
