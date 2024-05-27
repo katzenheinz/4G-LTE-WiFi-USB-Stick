@@ -7,7 +7,7 @@ https://de.aliexpress.com/item/1005006394474912.html | white model | UZ801 V3.2
 https://de.aliexpress.com/item/1005006394474912.html | black model | UZ801 V3.2
 https://de.aliexpress.com/item/1005006189041594.html | black model | UZ801 V3.0
 ```
-Resources
+Sources
 ```
 https://github.com/OpenStick
 https://www.kancloud.cn/handsomehacker/openstick/2637565
