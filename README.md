@@ -16,6 +16,12 @@ https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
 https://github.com/msm8916-mainline/linux
 ```
 
+Random Notes, chronologically sorted
+```
+- Debian Installation from Wim or Handsomehacker can be converted into Kali by changing the repos in sources.list, tested, working fine
+- UZ801 hw rev 3.0 and 3.2 are more ore less interchangable regarding the described technics/guides in this repo; modem fw differ tho, maybe I will upload my full bin dumps (or only modem.bin dumps) here, unsure how copyright laws are...
+```
+
 How to compile kernel 5.18 (needed it due to known wifi issues in kernel 5.15)
 
 ```
