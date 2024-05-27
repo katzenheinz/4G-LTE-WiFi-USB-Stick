@@ -13,7 +13,35 @@ https://github.com/OpenStick
 https://www.kancloud.cn/handsomehacker/openstick/2637565
 https://wvthoog.nl/openstick/
 https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
+https://github.com/msm8916-mainline/linux
 ```
+
+How to compile kernel 5.18 (needed it due to known wifi issues in kernel 5.15)
+
+```
+// get linux kernel 5.18 src from mainline msm8916 repo
+wget https://github.com/msm8916-mainline/linux/archive/refs/tags/v5.18-msm8916.tar.gz
+tar xvzf v5.18-msm8916.tar.gz
+cd msm8916-mainline-v5.18/linux-5.18-msm8916/
+
+// apply changes, that handsomehacker applied in his repo - in detail: he created the dts/dtsi files for the uz801 (in his case 3.0, but it works for v3.2 boards aswell, in generell: v3.0 and v3.2 are interchangeabe and - according to my current knowdledge - only differ in the gsm-modem firmware)
+// dts file can be found in handsomehackers repo, same dir
+
+cp msm8916-handsome-openstick-uz801.dts arch/arm64/boot/dts/qcom/
+cp msm8916-handsome-openstick-common.dtsi arch/arm64/boot/dts/qcom/
+
+// edit arch/arm64/boot/dts/qcom/Makefile, activate dtb creation
+nano arch/arm64/boot/dts/qcom/Makefile
+// add: dtb-$(CONFIG_ARCH_QCOM) += msm8916-handsome-openstick-uz801.dtb right under dtb-$(CONFIG_ARCH_QCOM) += msm8916-wingtech-wt88047.dtb
+// handsomehacker applied some changes to the wifi driver in his kernel 5.15 fork, but these changes are already included in kernel 5.18, so no changes are necessary
+
+export CROSS_COMPILE=aarch64-linux-gnu-
+export ARCH=arm64
+make msm8916_defconfig
+// optional: copy old .conf
+... see kernel 5.15 section
+```
+
 
 How to compile kernel 5.15 - Guide/Summary
 - Assumptions: Working Linux Kernel Build System
@@ -22,6 +50,7 @@ export CROSS_COMPILE=aarch64-linux-gnu-
 export ARCH=arm64
 make msm8916_defconfig
 make menuconfig
+make download
 make -j2
 fakeroot make-kpkg --initrd --cross-compile aarch64-linux-gnu- --arch arm64 kernel_image kernel_headers
 cd ..
