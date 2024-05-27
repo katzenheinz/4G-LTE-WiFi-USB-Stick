@@ -1,20 +1,8 @@
 # 4G-LTE-WiFi-USB-Stick
 Archive/collection of information for Chinese (Aliexpress) Wifi/LTE/4G/USB sticks, which can be used as 8€ SBC.
 
-Where to buy?
-```
-https://de.aliexpress.com/item/1005006394474912.html | white model | UZ801 V3.2
-https://de.aliexpress.com/item/1005006394474912.html | black model | UZ801 V3.2
-https://de.aliexpress.com/item/1005006189041594.html | black model | UZ801 V3.0
-```
-Sources
-```
-https://github.com/OpenStick
-https://www.kancloud.cn/handsomehacker/openstick/2637565
-https://wvthoog.nl/openstick/
-https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
-https://github.com/msm8916-mainline/linux
-```
+Due to a major depressive episode I dont leave my house right now. To keep my head active and myself distracted I found that staying in my basement lab and playing with cheap chinese embedded devices (and somking alot of weed) helped alot in similar episodes in the past. I think these are pretty little single board computers and definitly what I thought the "10$ rpi zero" should have been back then.
+
 
 Random Notes, chronologically sorted
 ```
@@ -68,7 +56,6 @@ mkbootimg --base 0x80000000 --kernel_offset 0x00080000 --ramdisk_offset 0x020000
 // scp boot.img to device, on device, flash with:
 dd if=boot.img of=/dev/mmcblk0p12
 ```
-
 
 From https://www.kancloud.cn/handsomehacker/openstick/2637565 (translated using deepl.com):
 
@@ -141,9 +128,6 @@ After that, you can flush the two img files into the corresponding partitions.
 Copied from https://zebra.ddscentral.org/pub/downloads/openstick/firmware/uz801_v30/README
 
 ```
-
-
-
 OpenStick Build for board UZ801 V3.0 (may also work on earlier revisions, try at your own risk)
 
 Homepage: https://github.com/OpenStick/
@@ -208,7 +192,18 @@ If you need help, I'm available by email: dds[alpha]ddscentral[dot]org or ddscen
 DDS Central
 ```
 
+Where to buy?
+```
+https://de.aliexpress.com/item/1005006394474912.html | white model | UZ801 V3.2
+https://de.aliexpress.com/item/1005006394474912.html | black model | UZ801 V3.2
+https://de.aliexpress.com/item/1005006189041594.html | black model | UZ801 V3.0
+```
 
-
-
-
+Sources
+```
+https://github.com/OpenStick
+https://www.kancloud.cn/handsomehacker/openstick/2637565
+https://wvthoog.nl/openstick/
+https://wiki.postmarketos.org/wiki/Zhihe_series_LTE_dongles_(generic-zhihe)
+https://github.com/msm8916-mainline/linux
+```
